@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Skill Swap – Help Center</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bgMain: "#0b1220",
+        bgNav: "#0f1b2d",
+        bgCard: "#121f34",
+        borderDark: "#1c2f4a",
+        primary: "#19e3d5",
+        accent: "#3b82f6",
+        textMain: "#e5eef8",
+        textMuted: "#8fa7c3"
+      },
+      fontFamily: {
+        display: ["Manrope", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body { font-family: Manrope, sans-serif; }
+</style>
+</head>
+
+<body class="bg-bgMain text-textMain min-h-screen flex flex-col">
+
+<!-- NAVBAR -->
+<header class="bg-bgNav border-b border-borderDark sticky top-0 z-50">
+  <div class="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary text-3xl">swap_calls</span>
+      <span class="font-bold text-lg">SkillSwap.PRO</span>
+    </div>
+
+    <nav class="hidden md:flex gap-8 text-sm text-textMuted">
+      <a class="hover:text-primary">Browse Skills</a>
+      <a class="hover:text-primary">How it Works</a>
+      <a class="hover:text-primary">Community</a>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-1">
+
+<!-- HERO -->
+<section class="py-20 text-center">
+  <h1 class="text-5xl font-black mb-4">Help Center</h1>
+  <p class="text-textMuted max-w-xl mx-auto mb-10">
+    Find answers, explore guides, and learn how to get the most out of SkillSwap.
+  </p>
+
+  <div class="max-w-xl mx-auto flex bg-bgCard border border-borderDark rounded-xl overflow-hidden">
+    <span class="material-symbols-outlined text-textMuted px-4 py-4">search</span>
+    <input class="flex-1 bg-transparent text-textMain placeholder-textMuted focus:outline-none"
+      placeholder="Search articles, skills, or topics..." />
+    <button class="bg-primary text-bgMain font-bold px-6">Search</button>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="max-w-[1200px] mx-auto px-6 pb-20">
+  <h2 class="text-2xl font-bold mb-8">Browse by Category</h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- CARD -->
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">rocket_launch</span>
+      <h3 class="font-bold mb-1">Getting Started</h3>
+      <p class="text-textMuted text-sm">Learn how SkillSwap works and set up your profile.</p>
+    </div>
+
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">sync_alt</span>
+      <h3 class="font-bold mb-1">Skill Swapping</h3>
+      <p class="text-textMuted text-sm">Request, schedule, and manage swaps.</p>
+    </div>
+
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">account_circle</span>
+      <h3 class="font-bold mb-1">Profile & Account</h3>
+      <p class="text-textMuted text-sm">Edit profile, privacy & availability.</p>
+    </div>
+
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">verified_user</span>
+      <h3 class="font-bold mb-1">Trust & Safety</h3>
+      <p class="text-textMuted text-sm">Security, reports & community rules.</p>
+    </div>
+
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">account_balance_wallet</span>
+      <h3 class="font-bold mb-1">Credits & Payments</h3>
+      <p class="text-textMuted text-sm">Understand the credit system.</p>
+    </div>
+
+    <div class="bg-bgCard border border-borderDark rounded-xl p-6 hover:shadow-lg hover:shadow-primary/10 transition">
+      <span class="material-symbols-outlined text-primary text-3xl mb-4">auto_stories</span>
+      <h3 class="font-bold mb-1">Community</h3>
+      <p class="text-textMuted text-sm">Guidelines & best practices.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUPPORT CTA -->
+<section class="max-w-[1000px] mx-auto px-6 pb-24">
+  <div class="bg-bgCard border border-borderDark rounded-2xl p-12 text-center">
+    <h2 class="text-2xl font-bold mb-3">Still need help?</h2>
+    <p class="text-textMuted mb-8">
+      Our support team is always ready to help you succeed.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+      <button class="bg-primary text-bgMain font-bold px-8 py-3 rounded-xl hover:scale-105 transition">
+        Contact Support
+      </button>
+      <button class="border border-borderDark px-8 py-3 rounded-xl hover:bg-bgNav transition">
+        Live Chat
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-borderDark py-10 text-center text-textMuted text-sm">
+  © 2026 SkillSwap.PRO — All rights reserved
+</footer>
+
+</body>
+</html>

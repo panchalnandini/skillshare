@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How It Works – SkillSwap</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bgMain: "#0b1220",
+        bgNav: "#0f1b2d",
+        bgCard: "#121f34",
+        borderDark: "#1c2f4a",
+        primary: "#19e3d5",
+        secondary: "#3b82f6",
+        textMain: "#e5eef8",
+        textMuted: "#8fa7c3"
+      },
+      fontFamily: {
+        display: ["Lexend", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body { font-family: Lexend, sans-serif; }
+.step-card:hover { transform: translateY(-6px); transition: all .3s ease; }
+</style>
+</head>
+
+<body class="bg-bgMain text-textMain min-h-screen">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-bgNav border-b border-borderDark">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="size-10 bg-primary rounded-lg flex items-center justify-center text-bgMain">
+        <span class="material-symbols-outlined">swap_calls</span>
+      </div>
+      <h2 class="text-xl font-bold">SKILLSWAP.PRO</h2>
+    </div>
+
+    <nav class="hidden md:flex gap-8 text-sm text-textMuted">
+      <a class="hover:text-primary">How it works</a>
+      <a class="hover:text-primary">Discover</a>
+      <a class="hover:text-primary">Community</a>
+      <a class="hover:text-primary">Pricing</a>
+    </nav>
+
+    <div class="flex gap-3">
+      <button class="px-5 py-2 text-sm font-semibold text-textMuted hover:text-primary">
+        Log In
+      </button>
+      <button class="px-5 py-2 bg-primary text-bgMain font-bold rounded-lg hover:scale-105 transition">
+        Get Started
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="py-28 text-center relative overflow-hidden">
+  <h1 class="text-5xl md:text-7xl font-black mb-6">
+    Unlock New Skills Through Exchange
+  </h1>
+  <p class="text-textMuted max-w-2xl mx-auto text-lg mb-10">
+    Share what you know. Learn what you don’t. Grow together on SkillSwap.
+  </p>
+
+  <div class="flex justify-center gap-4">
+    <button class="px-8 py-4 bg-primary text-bgMain font-bold rounded-xl hover:scale-105 transition">
+      Start Swapping Now
+    </button>
+    <button class="px-8 py-4 border border-borderDark rounded-xl hover:bg-bgCard">
+      Watch Video
+    </button>
+  </div>
+
+  <div class="absolute top-0 right-0 size-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 size-[400px] bg-secondary/10 rounded-full blur-3xl"></div>
+</section>
+
+<!-- STEPS -->
+<section class="py-24">
+  <h2 class="text-center text-4xl font-bold mb-16">How it works</h2>
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-8">
+    <!-- Step -->
+    <div class="step-card bg-bgCard border border-borderDark rounded-2xl p-6 text-center">
+      <span class="material-symbols-outlined text-primary text-4xl mb-4">person_add</span>
+      <h3 class="font-bold mb-2">Create Profile</h3>
+      <p class="text-textMuted text-sm">Add skills you teach & want to learn.</p>
+    </div>
+
+    <div class="step-card bg-bgCard border border-borderDark rounded-2xl p-6 text-center">
+      <span class="material-symbols-outlined text-primary text-4xl mb-4">search</span>
+      <h3 class="font-bold mb-2">Find Matches</h3>
+      <p class="text-textMuted text-sm">Get paired with ideal learners.</p>
+    </div>
+
+    <div class="step-card bg-bgCard border border-borderDark rounded-2xl p-6 text-center">
+      <span class="material-symbols-outlined text-primary text-4xl mb-4">forum</span>
+      <h3 class="font-bold mb-2">Send Request</h3>
+      <p class="text-textMuted text-sm">Chat and schedule sessions.</p>
+    </div>
+
+    <div class="step-card bg-bgCard border border-borderDark rounded-2xl p-6 text-center">
+      <span class="material-symbols-outlined text-primary text-4xl mb-4">video_chat</span>
+      <h3 class="font-bold mb-2">Swap Skills</h3>
+      <p class="text-textMuted text-sm">Teach & learn live.</p>
+    </div>
+
+    <div class="step-card bg-bgCard border border-borderDark rounded-2xl p-6 text-center">
+      <span class="material-symbols-outlined text-primary text-4xl mb-4">military_tech</span>
+      <h3 class="font-bold mb-2">Earn Reputation</h3>
+      <p class="text-textMuted text-sm">Build trust & unlock badges.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24">
+  <div class="max-w-5xl mx-auto bg-bgCard border border-borderDark rounded-3xl p-16 text-center">
+    <h2 class="text-4xl font-black mb-6">Ready to swap skills?</h2>
+    <p class="text-textMuted mb-10">
+      Join thousands of professionals growing together.
+    </p>
+    <button class="px-10 py-4 bg-primary text-bgMain font-bold rounded-xl hover:scale-105 transition">
+      Get Started Free
+    </button>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-borderDark py-10 text-center text-textMuted text-sm">
+  © 2026 SkillSwap.PRO — All rights reserved
+</footer>
+
+</body>
+</html>
