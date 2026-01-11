@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SkillShare Discover Matches</title>
+<title>SkillShare Networking Matches</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -14,175 +12,195 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#122b1d", // Deep Green
-                        "slate-blue": "#364156",
-                        "midnight": "#011638",
-                        "mint-white": "#DFF8EB",
-                        "light-grey": "#CDCDCD",
-                        "background-light": "#f6f7f7",
+                        "primary": "#011637",
+                        "secondary": "#364156",
+                        "accent-light": "#DFF8EB",
+                        "accent-dark": "#122B1D",
+                        "text-muted": "#CDCDCD",
+                        "background-light": "#f5f7f8",
                         "background-dark": "#011638",
+                        "slate-blue": "#475569",
+                        "deep-green": "#059669"
                     },
                     fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
+                        "display": ["Lexend"]
                     },
                     borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
                         "full": "9999px"
                     },
                 },
             },
         }
     </script>
-<style>
+<style type="text/tailwindcss">
         body {
             font-family: 'Lexend', sans-serif;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .icon-fill {
-            font-variation-settings: 'FILL' 1;
+        .sidebar-active {
+            background-color: #364156;
+            color: #DFF8EB;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #364156;
+            border-radius: 10px;
+        }
+        .swipe-card-gradient {
+            background: linear-gradient(180deg, rgba(1, 22, 56, 0) 0%, rgba(1, 22, 56, 0.9) 100%);
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-mint-white min-h-screen flex overflow-hidden">
-<!-- Side Navigation Bar -->
-<aside class="w-72 bg-midnight border-r border-slate-blue/30 h-screen flex flex-col p-6 shrink-0">
-<div class="flex items-center gap-3 mb-10">
-<div class="bg-primary size-10 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-mint-white">hub</span>
+<body class="bg-background-dark text-slate-900 dark:text-white antialiased">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 flex-shrink-0 bg-primary border-r border-secondary/30 hidden md:flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 text-accent-light">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
 </div>
-<div class="flex flex-col">
-<h1 class="text-mint-white text-lg font-bold leading-none">SkillShare</h1>
-<p class="text-light-grey text-xs font-normal">Connect &amp; Grow</p>
+<h1 class="text-xl font-bold tracking-tight text-white">SkillShare</h1>
 </div>
-</div>
-<nav class="flex flex-col gap-2 flex-grow">
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-blue/20 transition-colors cursor-pointer group text-light-grey">
-<span class="material-symbols-outlined group-hover:text-mint-white">dashboard</span>
-<p class="text-sm font-medium group-hover:text-mint-white">Dashboard</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-blue/20 transition-colors cursor-pointer group text-light-grey">
-<span class="material-symbols-outlined group-hover:text-mint-white">chat_bubble</span>
-<p class="text-sm font-medium group-hover:text-mint-white">Chat</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-blue/20 transition-colors cursor-pointer group text-light-grey">
-<span class="material-symbols-outlined group-hover:text-mint-white">groups</span>
-<p class="text-sm font-medium group-hover:text-mint-white">Community</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-blue/20 transition-colors cursor-pointer group text-light-grey">
-<span class="material-symbols-outlined group-hover:text-mint-white">calendar_today</span>
-<p class="text-sm font-medium group-hover:text-mint-white">Calendar</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-blue/20 transition-colors cursor-pointer group text-light-grey">
-<span class="material-symbols-outlined group-hover:text-mint-white">videocam</span>
-<p class="text-sm font-medium group-hover:text-mint-white">Meeting</p>
-</div>
-<div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-mint-white cursor-pointer">
-<span class="material-symbols-outlined icon-fill">person_search</span>
-<p class="text-sm font-medium">Matches</p>
-</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">chat</span>
+                Chat
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">groups</span>
+                Community
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Calendar
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+                Trending
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl sidebar-active text-sm font-medium" href="#">
+<span class="material-symbols-outlined">handshake</span>
+                Matches
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium" href="#">
+<span class="material-symbols-outlined">videocam</span>
+                Meeting
+            </a>
 </nav>
-<div class="pt-6 border-t border-slate-blue/30 mt-auto">
-<div class="flex items-center gap-3 px-4 py-3">
-<div class="size-10 rounded-full bg-cover bg-center" data-alt="Profile photo of the logged in user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO4u25IgSNfUWvclDs0VoIs0ggndJl04XAjx6MM4m3BcxKC2SzPI7U9SN-znCvs1HrFGm-cy74P5ha_WKnIZUgq3t5v_oJpEMkRkxSxh7TMjgNUSnsN2BhNnrDFEqp5iKSRYbYFDXJf5oWwcRJ2G9NL_-MJ9Pgb79j_jqi6iAn4P_8E0tRGBLSYAMTOm89u3B9jg45Pmraga1IhwdQ_Ut68e_y77e7f1LCiN3xlIKWtSfHMT_wwYJVTeq7tUU4HM9ZFhZUxwZFkwE");'></div>
-<div class="flex flex-col">
-<p class="text-mint-white text-sm font-medium">Alex Rivera</p>
-<p class="text-light-grey text-[10px] uppercase tracking-wider">Pro Member</p>
-</div>
+<div class="p-4 space-y-4">
+<button class="w-full bg-accent-dark border border-accent-light/20 text-accent-light py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-accent-dark/80 transition-all">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+                Start Lesson
+            </button>
+<div class="pt-4 border-t border-secondary/30">
+<div class="flex items-center gap-3 px-4 py-2 text-text-muted text-sm cursor-pointer hover:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </div>
+<div class="flex items-center gap-3 px-4 py-2 text-red-400 text-sm cursor-pointer hover:text-red-300 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+                    Logout
+                </div>
 </div>
 </div>
 </aside>
-<!-- Main Content Area -->
-<main class="flex-grow flex flex-col items-center justify-center p-8 relative overflow-y-auto">
-<!-- Header / Queue Status -->
-<div class="absolute top-8 w-full px-12 flex justify-between items-center max-w-4xl">
-<div>
-<h2 class="text-2xl font-bold text-mint-white">Discover Matches</h2>
-<p class="text-light-grey text-sm">Find your next mentor or collaborator</p>
-</div>
-<div class="flex flex-col items-end gap-2">
-<div class="flex gap-1">
-<div class="h-1.5 w-6 rounded-full bg-primary"></div>
-<div class="h-1.5 w-6 rounded-full bg-primary"></div>
-<div class="h-1.5 w-6 rounded-full bg-slate-blue"></div>
-<div class="h-1.5 w-6 rounded-full bg-slate-blue/30"></div>
-</div>
-<p class="text-xs text-light-grey">8 matches left today</p>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 flex items-center justify-between px-8 bg-background-dark border-b border-secondary/20">
+<div class="flex-1 max-w-xl">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">search</span>
+<input class="w-full bg-secondary/20 border-none rounded-xl pl-10 pr-4 py-2 focus:ring-2 focus:ring-accent-light/30 text-sm" placeholder="Search courses, mentors, or topics..." type="text"/>
 </div>
 </div>
-<!-- Discovery Card -->
-<div class="w-full max-w-[480px] mt-16 group relative">
-<!-- Background Stack Effect -->
-<div class="absolute -inset-2 bg-slate-blue/20 rounded-xl blur-lg transition-all group-hover:blur-xl"></div>
-<div class="relative bg-slate-blue dark:bg-slate-blue rounded-xl overflow-hidden shadow-2xl flex flex-col border border-white/5">
-<!-- User Image -->
-<div class="w-full aspect-[4/5] bg-center bg-no-repeat bg-cover relative" data-alt="Portrait of Sarah Jenkins a professional UX Designer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-U2-JyC-T0KqWd-3I2ZXXBo3LzHZZNVQnRi34W1mhTiV3rLJWSrZD5aylBgvS_YdH00otGpTfiuNYqtXJAYyVdUET-9usmZZGzxsRYuen6q2lD67zLDq4UiqOrKj5R85KInTH8K1USyXhY1R6EAuPvNKDgosP7kJWGIlWLN7SNaBECa-hbEcBFyOL7VYmQmuxg7DEMaAIGhrqJO_F32edET7IbnFu42kaOOqRI5X38CqULb0Qzcxcr_pxEQTQHHv-hbBckRKioEo");'>
-<div class="absolute inset-0 bg-gradient-to-t from-slate-blue via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6">
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="p-2 rounded-xl bg-secondary/20 text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-xl bg-secondary/20 text-text-muted hover:text-white transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-secondary/20">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold">Alex Sterling</p>
+<p class="text-xs text-text-muted leading-none">Pro Learner</p>
+</div>
+<div class="size-10 rounded-full bg-center bg-cover border-2 border-accent-light/30" data-alt="Portrait of a professional learner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqROXZ86Nfcd8H0sb5johQAH-6dXtxNKzkYUfdKx8yPr5GkhGFLPfAGjSqVxerqZhG9bfCc8_EkumBLwceiu15QS5J9u8zPnOJOtpKAt6FYpAI4t8GpMrlfUoArmKW-P7DtJK1jA19aI94pzP2ld7Xwr00l-KG2QARO6WYdFSkJk7JFCW-NMeeum35O0DR3g2hVJuPrH0xtokHOsycaNVwfHSVS2DXMfN_yIbpzKudIeFN9SeS7EC9XsvLFw3Jp3HLartLOff-20M')"></div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar flex flex-col items-center">
+<div class="max-w-4xl w-full text-center mb-8">
+<h2 class="text-3xl font-black tracking-tight text-white">Networking Matches</h2>
+<p class="text-text-muted mt-2">Connect with top mentors and peers based on your skill goals</p>
+</div>
+<div class="relative w-full max-w-md h-[550px] group">
+<div class="absolute inset-x-4 -bottom-4 h-full bg-primary/40 border border-secondary/20 rounded-3xl -z-10 transform scale-95 opacity-50"></div>
+<div class="absolute inset-x-2 -bottom-2 h-full bg-primary/60 border border-secondary/20 rounded-3xl -z-10 transform scale-98 opacity-70"></div>
+<div class="relative h-full w-full bg-primary border-2 border-secondary/30 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+<div class="h-3/5 relative">
+<img alt="Mentor Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCljASp5uRVpWvPOr_w1VoU3bbHHmo7Zp_ZW_Y5JpOxXXdm4L6UyAJjpLJvVDSVMHh-FI68cDMPYC2FezLSwHkwawtOMVjB-euCRO3EaB5CdEA6kssZ6bKdY8Eh46qJn5DxfABRaFEqIAVWujtpFh3LQSICQBXz4WsKD_dZ-mEWwymLr0jp9N_t3wy8QwBjpNhdJ8lS2UgE0O7a4WUXS8X0Nhp7-ucWOPqq6cLCVcmypTrz4kVMtgV7KHOKS3D35hA_3ib0SMUKwBI"/>
+<div class="absolute inset-0 swipe-card-gradient"></div>
+<div class="absolute bottom-4 left-6 right-6">
 <div class="flex items-center gap-2 mb-1">
-<span class="bg-primary/90 text-mint-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">95% Match</span>
-<span class="bg-white/10 backdrop-blur-md text-white text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1">
-<span class="material-symbols-outlined text-[12px]">location_on</span> New York, NY
-                            </span>
+<span class="bg-accent-light text-primary text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Top Mentor</span>
+<span class="bg-deep-green text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">98% Match</span>
 </div>
-<h3 class="text-white text-3xl font-bold leading-tight">Sarah Jenkins</h3>
-<p class="text-light-grey text-base font-medium">Senior UX Designer • 8+ yrs exp</p>
+<h3 class="text-3xl font-bold text-white leading-tight">Julian VanHoutte, 32</h3>
+<p class="text-accent-light font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                San Francisco, CA
+                            </p>
 </div>
 </div>
-<!-- Info Section -->
-<div class="p-6 flex flex-col gap-6">
-<p class="text-mint-white/80 text-sm leading-relaxed">
-                        Passionate about building inclusive digital products and mentoring junior designers. Expert in Figma and complex design systems.
-                    </p>
-<!-- Skills to Teach -->
+<div class="p-6 flex-1 flex flex-col justify-between">
 <div>
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary text-sm">school</span>
-<h4 class="text-mint-white text-xs font-bold uppercase tracking-widest">Skills to Teach</h4>
+<p class="text-text-muted text-sm font-medium mb-3">EXPERTISE</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-secondary/30 px-3 py-1 rounded-lg text-xs font-semibold text-white">Cloud Architecture</span>
+<span class="bg-secondary/30 px-3 py-1 rounded-lg text-xs font-semibold text-white">Kubernetes</span>
+<span class="bg-secondary/30 px-3 py-1 rounded-lg text-xs font-semibold text-white">DevOps</span>
+<span class="bg-secondary/30 px-3 py-1 rounded-lg text-xs font-semibold text-white">GoLang</span>
 </div>
-<div class="flex flex-wrap gap-2">
-<div class="px-4 py-1.5 rounded-full bg-primary/40 border border-primary/20 text-mint-white text-xs font-medium">UX Strategy</div>
-<div class="px-4 py-1.5 rounded-full bg-primary/40 border border-primary/20 text-mint-white text-xs font-medium">Design Systems</div>
-<div class="px-4 py-1.5 rounded-full bg-primary/40 border border-primary/20 text-mint-white text-xs font-medium">Figma Prototyping</div>
-</div>
-</div>
-<!-- Skills to Learn -->
-<div>
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-light-grey text-sm">lightbulb</span>
-<h4 class="text-mint-white text-xs font-bold uppercase tracking-widest">Skills to Learn</h4>
-</div>
-<div class="flex flex-wrap gap-2">
-<div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-light-grey text-xs font-medium">React Native</div>
-<div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-light-grey text-xs font-medium">Business Dev</div>
+<p class="text-sm text-text-muted leading-relaxed line-clamp-3">
+                                Helping engineering teams scale infrastructure for a decade. Passionate about teaching modern container orchestration and automation workflows.
+                            </p>
 </div>
 </div>
 </div>
-<!-- Action Buttons Container (Floated within card bottom) -->
-<div class="flex justify-center gap-8 pb-8 pt-2">
-<!-- Decline Button -->
-<button class="size-16 rounded-full bg-slate-blue border-2 border-mint-white/10 flex items-center justify-center text-mint-white hover:bg-red-900/40 hover:border-red-500/50 transition-all active:scale-90 shadow-lg group/btn">
-<span class="material-symbols-outlined text-3xl group-hover/btn:scale-110 transition-transform">close</span>
+</div>
+<div class="flex items-center gap-10 mt-12 mb-8">
+<button class="size-16 rounded-full bg-slate-blue/10 border-2 border-slate-blue text-slate-blue flex items-center justify-center hover:bg-slate-blue hover:text-white transition-all transform active:scale-90 group">
+<span class="material-symbols-outlined text-4xl font-bold">close</span>
+<span class="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold uppercase tracking-widest text-slate-blue">Pass</span>
 </button>
-<!-- Accept Button -->
-<button class="size-16 rounded-full bg-primary border-2 border-primary flex items-center justify-center text-mint-white hover:bg-primary/80 hover:scale-110 transition-all active:scale-95 shadow-xl shadow-primary/20 group/btn">
-<span class="material-symbols-outlined text-3xl icon-fill group-hover/btn:scale-125 transition-transform">favorite</span>
+<button class="size-10 rounded-full border border-secondary/30 text-text-muted flex items-center justify-center hover:bg-secondary/30 hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">info</span>
+</button>
+<button class="size-16 rounded-full bg-deep-green/10 border-2 border-deep-green text-deep-green flex items-center justify-center hover:bg-deep-green hover:text-white transition-all transform active:scale-90 group shadow-[0_0_20px_rgba(5,150,105,0.2)]">
+<span class="material-symbols-outlined text-4xl font-bold">favorite</span>
+<span class="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold uppercase tracking-widest text-deep-green">Match</span>
 </button>
 </div>
-</div>
-</div>
-<!-- Keyboard Shortcut Hint -->
-<div class="mt-8 flex gap-6 text-[10px] text-light-grey/50 font-medium uppercase tracking-[0.2em]">
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded border border-light-grey/20">LEFT</span> PASS
-            </div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-1 rounded border border-light-grey/20">RIGHT</span> CONNECT
-            </div>
+<p class="text-text-muted/50 text-xs font-medium uppercase tracking-[0.2em]">Press ← for Pass, → for Match</p>
 </div>
 </main>
-</body>
-</html>
+</div>
+
+</body></html>
