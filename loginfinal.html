@@ -1,151 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login | Skill Mate</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Skill Swap</title>
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#1e88e5",
-            bgMain: "#0b1c2d",
-            bgCard: "#13293d",
-            bgDeep: "#0f2438",
-            textMain: "#ffffff",
-            textMuted: "#9bb3c8",
-            borderDark: "#1f3b57"
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e88e5",
+              bgMain: "#0b1c2d",
+              bgCard: "#13293d",
+              bgDeep: "#0f2438",
+              textMain: "#ffffff",
+              textMuted: "#9bb3c8",
+              borderDark: "#1f3b57",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
           },
-          fontFamily: {
-            display: ["Lexend", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
-</head>
+        },
+      };
+    </script>
+  </head>
 
-<body class="font-display bg-bgMain text-textMain min-h-screen">
-
-<div class="flex min-h-screen flex-col lg:flex-row">
-
-  <!-- LEFT IMAGE SECTION -->
-  <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-bgDeep">
-    <div class="absolute inset-0 bg-cover bg-center"
-      style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary/50 to-bgMain"></div>
-    </div>
-
-    <div class="relative z-10 flex flex-col justify-end p-12">
-      <div class="mb-8">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="material-symbols-outlined text-4xl">swap_calls</span>
-          <span class="text-2xl font-bold">Skill Mate</span>
+  <body class="font-display bg-bgMain text-textMain min-h-screen">
+    <div class="flex min-h-screen flex-col lg:flex-row">
+      <!-- LEFT IMAGE SECTION -->
+      <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-bgDeep">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1521737604893-d14cc237f11d&quot;);
+          "
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-primary/50 to-bgMain"
+          ></div>
         </div>
 
-        <h1 class="text-5xl font-bold leading-tight mb-4">
-          Learn & Teach <br/>Skills Together
-        </h1>
+        <div class="relative z-10 flex flex-col justify-end p-12">
+          <div class="mb-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="material-symbols-outlined text-4xl">swap_calls</span>
+              <span class="text-2xl font-bold">Skill Swap</span>
+            </div>
 
-        <p class="text-lg text-textMuted max-w-md">
-          Exchange real skills with real people. Teach what you know. Learn what you love.
-        </p>
-      </div>
+            <h1 class="text-5xl font-bold leading-tight mb-4">
+              Learn & Teach <br />Skills Together
+            </h1>
 
-      <p class="text-sm text-textMuted">Join 5,000+ learners worldwide</p>
-    </div>
-  </div>
-
-  <!-- RIGHT LOGIN SECTION -->
-  <div class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 bg-bgMain">
-
-    <!-- MOBILE HEADER -->
-    <div class="lg:hidden flex items-center gap-2 mb-10">
-      <span class="material-symbols-outlined text-3xl">swap_calls</span>
-      <span class="text-xl font-bold">Skill Swap</span>
-    </div>
-
-    <div class="mx-auto w-full max-w-sm bg-bgCard p-8 rounded-xl shadow-lg border border-borderDark">
-
-      <h2 class="text-3xl font-bold mb-2">Welcome Back</h2>
-      <p class="text-textMuted mb-8">
-        Sign in to continue your skill journey.
-      </p>
-
-      <form class="space-y-5">
-
-        <!-- EMAIL -->
-        <div>
-          <label class="text-sm font-medium">Email</label>
-          <input type="email"
-            placeholder="name@example.com"
-            class="mt-2 w-full h-12 rounded-lg bg-bgDeep border border-borderDark px-4 text-textMain placeholder-textMuted focus:ring-2 focus:ring-primary focus:outline-none"/>
-        </div>
-
-        <!-- PASSWORD -->
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="text-sm font-medium">Password</label>
-            <a href="#" class="text-sm text-primary hover:underline">Forgot?</a>
+            <p class="text-lg text-textMuted max-w-md">
+              Exchange real skills with real people. Teach what you know. Learn
+              what you love.
+            </p>
           </div>
-          <input type="password"
-            placeholder="••••••••"
-            class="w-full h-12 rounded-lg bg-bgDeep border border-borderDark px-4 text-textMain placeholder-textMuted focus:ring-2 focus:ring-primary focus:outline-none"/>
+
+          <p class="text-sm text-textMuted">Join 5,000+ learners worldwide</p>
         </div>
-
-        <!-- REMEMBER -->
-        <div class="flex items-center gap-2">
-          <input type="checkbox" class="rounded border-borderDark text-primary"/>
-          <span class="text-sm text-textMuted">Remember me</span>
-        </div>
-
-        <!-- BUTTON -->
-        <button type="submit"
-          class="w-full h-12 bg-primary hover:bg-blue-600 rounded-lg font-bold transition">
-          Sign In
-        </button>
-      </form>
-
-      <!-- DIVIDER -->
-      <div class="my-8 flex items-center">
-        <div class="flex-grow border-t border-borderDark"></div>
-        <span class="px-4 text-sm text-textMuted">OR</span>
-        <div class="flex-grow border-t border-borderDark"></div>
       </div>
 
-      <!-- SOCIAL -->
-      <div class="grid grid-cols-2 gap-4">
-        <button class="h-12 rounded-lg border border-borderDark hover:bg-bgDeep transition">
-          Google
-        </button>
-        <button class="h-12 rounded-lg border border-borderDark hover:bg-bgDeep transition">
-          LinkedIn
-        </button>
+      <!-- RIGHT LOGIN SECTION -->
+      <div
+        class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 bg-bgMain"
+      >
+        <!-- MOBILE HEADER -->
+        <div class="lg:hidden flex items-center gap-2 mb-10">
+          <span class="material-symbols-outlined text-3xl">swap_calls</span>
+          <span class="text-xl font-bold">Skill Swap</span>
+        </div>
+
+        <div
+          class="mx-auto w-full max-w-sm bg-bgCard p-8 rounded-xl shadow-lg border border-borderDark"
+        >
+          <h2 class="text-3xl font-bold mb-2">Welcome Back</h2>
+          <p class="text-textMuted mb-8">
+            Sign in to continue your skill journey.
+          </p>
+
+          <form class="space-y-5" onsubmit="login(event)">
+            <!-- EMAIL -->
+            <div>
+              <input
+                type="email"
+                id="email"
+                placeholder="name@example.com"
+                class="mt-2 w-full h-12 rounded-lg bg-bgDeep border border-borderDark px-4"
+              />
+            </div>
+
+            <!-- PASSWORD -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <label class="text-sm font-medium">Password</label>
+                <a href="#" class="text-sm text-primary hover:underline"
+                  >Forgot?</a
+                >
+              </div>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                class="w-full h-12 rounded-lg bg-bgDeep border border-borderDark px-4"
+              />
+            </div>
+
+            <!-- REMEMBER -->
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                class="rounded border-borderDark text-primary"
+              />
+              <span class="text-sm text-textMuted">Remember me</span>
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              type="submit"
+              class="w-full h-12 bg-primary hover:bg-blue-600 rounded-lg font-bold transition"
+            >
+            <a href="dashboard.html">
+              Sign In
+            </button>
+            </a>
+          </form>
+
+          <!-- DIVIDER -->
+          <div class="my-8 flex items-center">
+            <div class="flex-grow border-t border-borderDark"></div>
+            <span class="px-4 text-sm text-textMuted">OR</span>
+            <div class="flex-grow border-t border-borderDark"></div>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="h-12 rounded-lg border border-borderDark hover:bg-bgDeep transition"
+            >
+              Google
+            </button>
+            <button
+              class="h-12 rounded-lg border border-borderDark hover:bg-bgDeep transition"
+            >
+              LinkedIn
+            </button>
+          </div>
+
+          <p class="mt-8 text-center text-sm text-textMuted">
+            Don’t have an account?
+            <a href="#" class="text-primary font-bold hover:underline"
+              >Sign Up</a
+            >
+          </p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="mt-10 flex justify-center gap-6 text-xs text-textMuted">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Help Center</a>
+        </div>
       </div>
-
-      <p class="mt-8 text-center text-sm text-textMuted">
-        Don’t have an account?
-        <a href="#" class="text-primary font-bold hover:underline">Sign Up</a>
-      </p>
     </div>
 
-    <!-- FOOTER -->
-    <div class="mt-10 flex justify-center gap-6 text-xs text-textMuted">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Help Center</a>
-    </div>
+    <!-- Login Js -->
+    <script>
+      function login(event) {
+        event.preventDefault(); // stop page refresh
 
-  </div>
-</div>
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-</body>
+        if (email === "" || password === "") {
+          alert("Please fill all fields");
+          return;
+        }
+
+        // Fake login for hackathon
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", email);
+
+        // redirect
+        window.location.href = "dashboard.html";
+      }
+    </script>
+
+<!-- backend -->
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("input[type='email']").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    const res = await fetch("http://127.0.0.1:5000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.message || "Login failed");
+      return;
+    }
+
+    // save token
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("email", data.email);
+
+    // redirect
+    window.location.href = "dashboard.html";
+  });
+</script>
+
+
+
+  </body>
 </html>
-
