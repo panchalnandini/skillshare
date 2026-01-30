@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -285,4 +285,571 @@
 
 
 
+
+ -->
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SkillMate Messages Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#011637",
+              secondary: "#364156",
+              "accent-light": "#DFF8EB",
+              "accent-dark": "#122B1D",
+              "text-muted": "#CDCDCD",
+              "background-light": "#f5f7f8",
+              "background-dark": "#011638",
+            },
+            fontFamily: {
+              display: ["Lexend"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .sidebar-active {
+        background-color: #364156;
+        color: #dff8eb;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #364156;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased"
+  >
+    <div class="flex h-screen overflow-hidden">
+      <aside
+        class="w-64 flex-shrink-0 bg-primary border-r border-secondary/30 hidden md:flex flex-col"
+      >
+        <div class="p-6 flex items-center gap-3">
+          <div class="size-8 text-accent-light">
+            <svg
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="text-xl font-bold tracking-tight text-white">SkillMate</h1>
+        </div>
+        <nav class="flex-1 px-4 space-y-2 mt-4">
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="dashboard.html"
+          >
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl sidebar-active text-sm font-medium"
+            href="chat.html"
+          >
+            <span class="material-symbols-outlined">chat</span>
+            Chat
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="community.html"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            Community
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="calender.html"
+          >
+            <span class="material-symbols-outlined">calendar_today</span>
+            Calendar
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="trending.html"
+          >
+            <span class="material-symbols-outlined">trending_up</span>
+            Trending
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="homepage.html"
+          >
+            <span class="material-symbols-outlined">handshake</span>
+            Matches
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-text-muted hover:bg-secondary/20 transition-colors text-sm font-medium"
+            href="meeting.html"
+          >
+            <span class="material-symbols-outlined">videocam</span>
+            Meeting
+          </a>
+        </nav>
+        <div class="p-4 space-y-4">
+          <!-- <button
+            class="w-full bg-accent-dark border border-accent-light/20 text-accent-light py-3 rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-accent-dark/80 transition-all"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >play_circle</span
+            >
+            Start Lesson
+          </button> -->
+          <div class="pt-4 border-t border-secondary/30">
+            <div
+              class="flex items-center gap-3 px-4 py-2 text-text-muted text-sm cursor-pointer hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined">settings</span>
+              Settings
+            </div>
+            <div
+              class="flex items-center gap-3 px-4 py-2 text-red-400 text-sm cursor-pointer hover:text-red-300 transition-colors"
+            >
+              <span class="material-symbols-outlined">logout</span>
+              Logout
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="flex-1 flex flex-col overflow-hidden">
+        <header
+          class="h-16 flex-shrink-0 flex items-center justify-between px-8 bg-background-light dark:bg-background-dark border-b border-secondary/20"
+        >
+          <div class="flex-1 max-w-xl">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted"
+                >search</span
+              >
+              <input
+                class="w-full bg-secondary/10 dark:bg-secondary/20 border-none rounded-xl pl-10 pr-4 py-2 focus:ring-2 focus:ring-accent-light/30 text-sm"
+                placeholder="Search courses, mentors, or topics..."
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="flex gap-2">
+              <button
+                class="p-2 rounded-xl bg-secondary/10 dark:bg-secondary/20 text-text-muted hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined">notifications</span>
+              </button>
+              <button
+                class="p-2 rounded-xl bg-secondary/10 dark:bg-secondary/20 text-text-muted hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined">mail</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center gap-3 pl-4 border-l border-secondary/20"
+            >
+              <div class="text-right hidden sm:block">
+                <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                  Rohan Sharma
+                </p>
+                <p class="text-xs text-text-muted leading-none">Pro Learner</p>
+              </div>
+              <div
+                class="size-10 rounded-full bg-center bg-cover border-2 border-accent-light/30"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAqROXZ86Nfcd8H0sb5johQAH-6dXtxNKzkYUfdKx8yPr5GkhGFLPfAGjSqVxerqZhG9bfCc8_EkumBLwceiu15QS5J9u8zPnOJOtpKAt6FYpAI4t8GpMrlfUoArmKW-P7DtJK1jA19aI94pzP2ld7Xwr00l-KG2QARO6WYdFSkJk7JFCW-NMeeum35O0DR3g2hVJuPrH0xtokHOsycaNVwfHSVS2DXMfN_yIbpzKudIeFN9SeS7EC9XsvLFw3Jp3HLartLOff-20M&quot;);
+                "
+              ></div>
+            </div>
+          </div>
+        </header>
+        <div class="flex-1 flex overflow-hidden">
+          <aside
+            class="w-80 flex-shrink-0 border-r border-secondary/20 flex flex-col bg-background-light dark:bg-background-dark"
+          >
+            <div class="p-4 border-b border-secondary/20">
+              <h2 class="text-xl font-bold mb-4">Messages</h2>
+              <div class="relative">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-lg"
+                  >search</span
+                >
+                <input
+                  class="w-full bg-secondary/10 dark:bg-secondary/20 border-none rounded-lg pl-10 pr-4 py-2 text-xs"
+                  placeholder="Search conversations..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar">
+              <div
+                class="p-4 flex gap-3 cursor-pointer hover:bg-secondary/10 transition-colors bg-secondary/20"
+              >
+                <div class="relative flex-shrink-0">
+                  <div
+                    class="size-12 rounded-xl bg-cover bg-center"
+                    style="background-image: url(image.png)"
+                  ></div>
+                  <span
+                    class="absolute -bottom-1 -right-1 size-3.5 bg-green-500 border-2 border-background-dark rounded-full"
+                  ></span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-start mb-0.5">
+                    <h4 class="font-bold text-sm truncate">Ruhi</h4>
+                    <span class="text-[10px] text-text-muted">10:45 AM</span>
+                  </div>
+                  <p class="text-xs text-text-muted truncate">
+                    The UX review is ready for your look!
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-4 flex gap-3 cursor-pointer hover:bg-secondary/10 transition-colors"
+              >
+                <div class="relative flex-shrink-0">
+                  <div
+                    class="size-12 rounded-xl bg-cover bg-center"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCEPlXnUXrnZNbGnX5oMtc6Ehm912f3Yc8GiNI2ga9zHwMHpjKcW7MwXpnd3wzaysABJ-qhhn3ifQXO2ed2DrVlGJ6_I5my5zKo1d7ryI9ffC3_n0nL-4XNQmoGeJmc30xTVldecDCI7xYyEYgl8qCoj-FIaaTgLwr-NWacm450-dyrgycswCua4AD9nvBRomuV4OGPF9YM-xUxZuapdtNl52sHRpG1bR0VxrVDorJqxbzT_HCnIexy85zgo_5zNQtaUKW1rTYkTRk&quot;);
+                    "
+                  ></div>
+                  <span
+                    class="absolute -bottom-1 -right-1 size-3.5 bg-slate-500 border-2 border-background-dark rounded-full"
+                  ></span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-start mb-0.5">
+                    <h4 class="font-bold text-sm truncate">Dhruv</h4>
+                    <span class="text-[10px] text-text-muted">Yesterday</span>
+                  </div>
+                  <p class="text-xs text-text-muted truncate">
+                    Thanks for the feedback on the API docs.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-4 flex gap-3 cursor-pointer hover:bg-secondary/10 transition-colors"
+              >
+                <div class="relative flex-shrink-0">
+                  <div
+                    class="size-12 rounded-xl bg-cover bg-center"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCljASp5uRVpWvPOr_w1VoU3bbHHmo7Zp_ZW_Y5JpOxXXdm4L6UyAJjpLJvVDSVMHh-FI68cDMPYC2FezLSwHkwawtOMVjB-euCRO3EaB5CdEA6kssZ6bKdY8Eh46qJn5DxfABRaFEqIAVWujtpFh3LQSICQBXz4WsKD_dZ-mEWwymLr0jp9N_t3wy8QwBjpNhdJ8lS2UgE0O7a4WUXS8X0Nhp7-ucWOPqq6cLCVcmypTrz4kVMtgV7KHOKS3D35hA_3ib0SMUKwBI&quot;);
+                    "
+                  ></div>
+                  <span
+                    class="absolute -bottom-1 -right-1 size-3.5 bg-green-500 border-2 border-background-dark rounded-full"
+                  ></span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-start mb-0.5">
+                    <h4 class="font-bold text-sm truncate">Juhii</h4>
+                    <span class="text-[10px] text-text-muted">Tue</span>
+                  </div>
+                  <p class="text-xs text-text-muted truncate">
+                    Are you free for a quick K8s chat?
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-4 flex gap-3 cursor-pointer hover:bg-secondary/10 transition-colors"
+              >
+                <div class="relative flex-shrink-0">
+                  <div
+                    class="size-12 rounded-xl bg-cover bg-center"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBzw6Eo3eBS8JPK0V5LfSbB4Eot8dC3wGBoj17SpKJ6uD9K3cA9Dt5AXq5nmOXnxoNCAdGvCBIo1feLg5oREaGnKrsPoGXL-CXg26jmte4wjjGz92frNqi2R2gQDGKfiTFyTyRJLF5hsGa0gSPwkNIT4ZHhNxV4ZSRo5pKH6ZZYciPVGa4LUlsGeJDwvHq1mQ2j8wtw8F_hbqjYnFHq2TfaY4UovPQLIE2dWbZaEjtjtTvRoriEvEFSVRVDBvEoFh1UYJ_x606h4vU&quot;);
+                    "
+                  ></div>
+                  <span
+                    class="absolute -bottom-1 -right-1 size-3.5 bg-amber-500 border-2 border-background-dark rounded-full"
+                  ></span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-start mb-0.5">
+                    <h4 class="font-bold text-sm truncate">Mayank</h4>
+                    <span class="text-[10px] text-text-muted">Mon</span>
+                  </div>
+                  <p class="text-xs text-text-muted truncate">
+                    Sent you the dataset for module 4.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <section class="flex-1 flex flex-col bg-white dark:bg-[#011638]">
+            <header
+              class="h-16 flex-shrink-0 flex items-center justify-between px-6 border-b border-secondary/20"
+            >
+              <div class="flex items-center gap-3">
+                <div class="relative">
+                  <div
+                    class="size-10 rounded-xl bg-cover bg-center"
+                    style="background-image: url(image.png)"
+                  ></div>
+                  <span
+                    class="absolute -bottom-1 -right-1 size-3 bg-green-500 border-2 border-background-dark rounded-full"
+                  ></span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold">Ruhi</h3>
+                  <p
+                    class="text-[10px] text-green-500 font-medium uppercase tracking-wider"
+                  >
+                    Online
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <!-- <button
+                  class="flex items-center gap-2 px-4 py-2 bg-accent-dark text-accent-light rounded-xl text-xs font-bold border border-accent-light/10 hover:brightness-110 transition-all"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >videocam</span
+                  >
+                  Quick Meet
+                </button> -->
+                <button
+                  class="p-2 text-text-muted hover:text-white transition-colors"
+                >
+                  <span class="material-symbols-outlined">more_vert</span>
+                </button>
+              </div>
+            </header>
+            <div
+              id="chatArea"
+              class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar"
+            >
+              <div class="flex justify-center">
+                <span
+                  class="text-[10px] font-bold text-text-muted uppercase tracking-widest bg-secondary/20 px-3 py-1 rounded-full"
+                  >Today</span
+                >
+              </div>
+              <div class="flex gap-3 max-w-[80%]">
+                <div
+                  class="size-8 rounded-lg bg-cover bg-center shrink-0 mt-1"
+                  style="background-image: url(image.png)"
+                ></div>
+                <div class="space-y-1">
+                  <div
+                    class="bg-[#DFF8EB] text-[#122B1D] p-3 rounded-2xl rounded-tl-none text-sm leading-relaxed shadow-sm"
+                  >
+                    Hey Rohan! I've finished reviewing the UX prototypes for the
+                    mobile dashboard. Overall it looks great, but I have some
+                    thoughts on the navigation flow.
+                  </div>
+                  <p class="text-[10px] text-text-muted ml-1">10:42 AM</p>
+                </div>
+              </div>
+              <div class="flex flex-row-reverse gap-3 max-w-[80%] ml-auto">
+                <div
+                  class="size-8 rounded-lg bg-cover bg-center shrink-0 mt-1"
+                  style="background-image: url(image.png)"
+                ></div>
+                <div class="space-y-1 items-end flex flex-col">
+                  <div
+                    class="bg-[#122B1D] text-[#DFF8EB] p-3 rounded-2xl rounded-tr-none text-sm leading-relaxed shadow-sm"
+                  >
+                    Thanks Ruhi! That's awesome. Which part of the flow felt off
+                    to you? I'm happy to jump on a quick call if that's easier.
+                  </div>
+                  <p class="text-[10px] text-text-muted mr-1">10:44 AM</p>
+                </div>
+              </div>
+              <div class="flex gap-3 max-w-[80%]">
+                <div
+                  class="size-8 rounded-lg bg-cover bg-center shrink-0 mt-1"
+                  style="background-image: url(image.png)"
+                ></div>
+                <div class="space-y-1">
+                  <div
+                    class="bg-[#DFF8EB] text-[#122B1D] p-3 rounded-2xl rounded-tl-none text-sm leading-relaxed shadow-sm"
+                  >
+                    The transition from the settings to the profile view seems a
+                    bit clunky. Let's do a 'Quick Meet'? I can screen share and
+                    show you exactly what I mean.
+                  </div>
+                  <p class="text-[10px] text-text-muted ml-1">10:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-2">
+              <div
+                class="bg-secondary/10 dark:bg-secondary/20 border border-secondary/20 rounded-2xl p-2 flex items-end gap-2"
+              >
+                <button
+                  class="p-2 text-text-muted hover:text-accent-light transition-colors"
+                >
+                  <span class="material-symbols-outlined">add_circle</span>
+                </button>
+                <textarea
+                  class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2 resize-none custom-scrollbar max-h-32"
+                  placeholder="Type a message..."
+                  rows="1"
+                ></textarea>
+                <div class="flex items-center gap-1">
+                  <button
+                    class="p-2 text-text-muted hover:text-accent-light transition-colors"
+                  >
+                    <span class="material-symbols-outlined"
+                      >sentiment_satisfied</span
+                    >
+                  </button>
+                  <button
+                    id="sendBtn"
+                    class="size-10 flex items-center justify-center bg-accent-light text-primary rounded-xl hover:brightness-110 transition-all shrink-0"
+                  >
+                    <span class="material-symbols-outlined">send</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const API = "http://127.0.0.1:5000"; // your backend
+      const TOKEN = "skillswap-demo-token"; // auth token
+
+      const textarea = document.querySelector("textarea");
+      const sendBtn = document.getElementById("sendBtn");
+      const chatArea = document.getElementById("chatArea");
+
+      // Send message on button click
+      sendBtn.addEventListener("click", sendMessage);
+
+      // Send message on Enter key (Shift+Enter for newline)
+      textarea.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      async function sendMessage() {
+        const text = textarea.value.trim();
+        if (!text) return;
+
+        const messageObj = {
+          sender: "Rohan",
+          receiver: "Ruhi",
+          message: text,
+        };
+
+        try {
+          // POST message to API
+          const res = await fetch(`${API}/messages/send`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: TOKEN,
+            },
+            body: JSON.stringify(messageObj),
+          });
+
+          if (!res.ok) throw new Error("Failed to send message");
+
+          // Clear textarea
+          textarea.value = "";
+
+          // Append immediately
+          appendMessage(messageObj);
+        } catch (err) {
+          console.error(err);
+          alert("Could not send message. Try again!");
+        }
+      }
+
+      // Append message to chat area
+      function appendMessage(msg) {
+        const isMe = msg.sender === "Rohan";
+        const bubbleWrapper = document.createElement("div");
+        bubbleWrapper.className = `flex ${isMe ? "flex-row-reverse ml-auto" : ""} max-w-[80%] gap-2`;
+
+        // Avatar
+        const avatar = document.createElement("div");
+        avatar.className = "size-8 rounded-lg bg-cover bg-center shrink-0 mt-1";
+        avatar.style.backgroundImage = isMe
+          ? "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqROXZ86Nfcd8H0sb5johQAH-6dXtxNKzkYUfdKx8yPr5GkhGFLPfAGjSqVxerqZhG9bfCc8_EkumBLwceiu15QS5J9u8zPnOJOtpKAt6FYpAI4t8GpMrlfUoArmKW-P7DtJK1jA19aI94pzP2ld7Xwr00l-KG2QARO6WYdFSkJk7JFCW-NMeeum35O0DR3g2hVJuPrH0xtokHOsycaNVwfHSVS2DXMfN_yIbpzKudIeFN9SeS7EC9XsvLFw3Jp3HLartLOff-20M')"
+          : "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRB6N3CadIONlWK78f0xQKy01Ga7FAzqNe12_dJLRY6AwxA8vvlj6U54cTmrU2hrlOV1z2sBpm9MmHVRkqfB7uwyC-ubtVlHvyhcuLpr3ZDdtKHDLcTbpAB3lcsMPOZUqIVtlY5R0g5dpnCUtfUD-cMeuv73L3rHwuYtTI8dZMcCU-RO0OUmBDUlA3AZimjqy_Mi2sv14JV6PEQqklEM_mII_S07clRYP1Ev69boUyajhIRRDDI-4aGDw-SjKDvwHtUUKbq35ouUw')";
+
+        // Message bubble
+        const bubble = document.createElement("div");
+        bubble.className = `${isMe ? "bg-[#122B1D] text-[#DFF8EB]" : "bg-[#DFF8EB] text-[#122B1D]"} p-3 rounded-2xl text-sm shadow-sm`;
+        bubble.textContent = msg.message;
+
+        bubbleWrapper.appendChild(avatar);
+        bubbleWrapper.appendChild(bubble);
+
+        chatArea.appendChild(bubbleWrapper);
+        chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: "smooth" });
+      }
+
+      // Load messages from API
+      async function loadMessages() {
+        try {
+          const res = await fetch(`${API}/messages/get`, {
+            headers: { Authorization: TOKEN },
+          });
+          if (!res.ok) throw new Error("Failed to load messages");
+
+          const data = await res.json();
+          chatArea.innerHTML = "";
+          data.forEach(appendMessage);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      // Initial load and periodic refresh
+      loadMessages();
+      setInterval(loadMessages, 2000);
+    </script>
+  </body>
+</html>
 
