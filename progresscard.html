@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "navy-deep": "#011638",
+              "navy-muted": "#364156",
+              "silver": "#CDCDCD",
+              "mint": "#DFF8EB",
+              "forest-dark": "#122B1D",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #011638;
+        }
+        .progress-glow {
+            box-shadow: 0 0 15px rgba(223, 248, 235, 0.4);
+        }
+        .sparkline-container svg {
+            filter: drop-shadow(0 0 2px rgba(223, 248, 235, 0.5));
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #364156;
+            border-radius: 10px;
+        }
+    </style>
+<title>Rohan Sharma Data Card Navy Theme</title>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 text-silver">
+<div class="max-w-[1100px] w-full bg-[#122B1D]/40 backdrop-blur-md rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.6)] border border-[#364156]/50 overflow-hidden">
+<div class="p-10 pb-6 border-b border-[#364156]/30 bg-[#011638]/60">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-[#DFF8EB]/5 flex items-center justify-center border border-[#DFF8EB]/20">
+<span class="material-symbols-outlined text-[#DFF8EB] text-2xl">analytics</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-bold text-[#DFF8EB] tracking-tight">
+                        Weekly Progress Report
+                    </h1>
+</div>
+<div class="flex items-center gap-3 ml-1">
+<p class="text-[#CDCDCD] text-lg font-medium">Rohan Sharma</p>
+<span class="h-1 w-1 rounded-full bg-[#364156]"></span>
+<p class="text-[#364156] text-sm font-semibold uppercase tracking-widest">Skill-Sharing Platform</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="bg-[#DFF8EB] text-[#011638] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-tighter shadow-[0_0_15px_rgba(223,248,235,0.3)]">
+                    Premium Member
+                </div>
+<div class="flex items-center gap-2 text-[#364156]">
+<span class="material-symbols-outlined text-sm">update</span>
+<p class="text-xs font-medium uppercase">Last updated: 2 mins ago</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-10 flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative flex flex-col gap-4 rounded-2xl p-6 bg-[#011638] border border-[#364156]/40 hover:border-[#DFF8EB]/40 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-[#CDCDCD] text-sm font-bold uppercase tracking-widest opacity-80">Total Hours</p>
+<span class="material-symbols-outlined text-[#DFF8EB]/60">schedule</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-[#DFF8EB] text-4xl font-bold leading-none">14.5</p>
+<p class="text-[#DFF8EB]/80 text-xs font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +2.1h this week
+                        </p>
+</div>
+<div class="sparkline-container w-24 h-12 flex items-end">
+<svg class="w-full h-full" viewBox="0 0 100 40">
+<path d="M0 35 L20 30 L40 32 L60 15 L80 18 L100 5" fill="none" stroke="#DFF8EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col gap-4 rounded-2xl p-6 bg-[#011638] border border-[#364156]/40 hover:border-[#DFF8EB]/40 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-[#CDCDCD] text-sm font-bold uppercase tracking-widest opacity-80">Tasks Finished</p>
+<span class="material-symbols-outlined text-[#DFF8EB]/60">verified</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-[#DFF8EB] text-4xl font-bold leading-none">24</p>
+<p class="text-[#DFF8EB]/80 text-xs font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +5 vs last week
+                        </p>
+</div>
+<div class="sparkline-container w-24 h-12 flex items-end">
+<svg class="w-full h-full" viewBox="0 0 100 40">
+<path d="M0 38 L25 35 L50 20 L75 25 L100 5" fill="none" stroke="#DFF8EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col gap-4 rounded-2xl p-6 bg-[#011638] border border-[#364156]/40 hover:border-[#DFF8EB]/40 transition-all duration-300">
+<div class="flex items-center justify-between">
+<p class="text-[#CDCDCD] text-sm font-bold uppercase tracking-widest opacity-80">Current Streak</p>
+<span class="material-symbols-outlined text-[#DFF8EB]/60">bolt</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="text-[#DFF8EB] text-4xl font-bold leading-none">5 Days</p>
+<p class="text-[#DFF8EB]/80 text-xs font-bold mt-2">Personal Best!</p>
+</div>
+<div class="sparkline-container w-24 h-12 flex items-end">
+<svg class="w-full h-full" viewBox="0 0 100 40">
+<path d="M0 35 L20 35 L40 35 L60 20 L80 15 L100 5" fill="none" stroke="#DFF8EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-8 rounded-2xl border border-[#364156]/40 p-10 bg-[#011638] relative overflow-hidden">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 z-10">
+<div class="flex flex-col gap-1">
+<p class="text-[#DFF8EB] text-2xl font-bold">Activity Analysis</p>
+<p class="text-[#CDCDCD] text-sm opacity-60">Hourly distribution for the current week</p>
+</div>
+<div class="flex items-center gap-4 bg-[#122B1D] px-4 py-2 rounded-lg border border-[#364156]/40">
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-[#DFF8EB]"></div>
+<span class="text-[#CDCDCD] text-xs font-bold uppercase tracking-widest">Active Hours</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-4 md:gap-8 items-end h-[280px] px-2 md:px-6 relative">
+<div class="absolute inset-x-0 top-0 h-full flex flex-col justify-between pointer-events-none opacity-5">
+<div class="border-t border-[#CDCDCD]"></div>
+<div class="border-t border-[#CDCDCD]"></div>
+<div class="border-t border-[#CDCDCD]"></div>
+<div class="border-t border-[#CDCDCD]"></div>
+<div class="border-t border-[#CDCDCD]"></div>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#364156]/40 group-hover:bg-[#DFF8EB] group-hover:shadow-[0_0_20px_rgba(223,248,235,0.4)] transition-all duration-500 w-full rounded-t-lg relative" style="height: 60%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#011638] to-transparent opacity-40 rounded-t-lg"></div>
+</div>
+<p class="text-[#364156] group-hover:text-[#DFF8EB] text-xs font-bold uppercase tracking-widest transition-colors">Mon</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#DFF8EB] shadow-[0_0_25px_rgba(223,248,235,0.3)] w-full rounded-t-lg relative" style="height: 95%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#122B1D]/40 to-transparent opacity-20 rounded-t-lg"></div>
+</div>
+<p class="text-[#DFF8EB] text-xs font-bold uppercase tracking-widest">Tue</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#DFF8EB] shadow-[0_0_25px_rgba(223,248,235,0.3)] w-full rounded-t-lg relative" style="height: 80%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#122B1D]/40 to-transparent opacity-20 rounded-t-lg"></div>
+</div>
+<p class="text-[#DFF8EB] text-xs font-bold uppercase tracking-widest">Wed</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#364156]/40 group-hover:bg-[#DFF8EB] group-hover:shadow-[0_0_20px_rgba(223,248,235,0.4)] transition-all duration-500 w-full rounded-t-lg relative" style="height: 40%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#011638] to-transparent opacity-40 rounded-t-lg"></div>
+</div>
+<p class="text-[#364156] group-hover:text-[#DFF8EB] text-xs font-bold uppercase tracking-widest transition-colors">Thu</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#364156]/40 group-hover:bg-[#DFF8EB] group-hover:shadow-[0_0_20px_rgba(223,248,235,0.4)] transition-all duration-500 w-full rounded-t-lg relative" style="height: 55%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#011638] to-transparent opacity-40 rounded-t-lg"></div>
+</div>
+<p class="text-[#364156] group-hover:text-[#DFF8EB] text-xs font-bold uppercase tracking-widest transition-colors">Fri</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#364156]/40 group-hover:bg-[#DFF8EB] group-hover:shadow-[0_0_20px_rgba(223,248,235,0.4)] transition-all duration-500 w-full rounded-t-lg relative" style="height: 30%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#011638] to-transparent opacity-40 rounded-t-lg"></div>
+</div>
+<p class="text-[#364156] group-hover:text-[#DFF8EB] text-xs font-bold uppercase tracking-widest transition-colors">Sat</p>
+</div>
+<div class="group relative flex flex-col items-center gap-4 w-full h-full justify-end">
+<div class="bg-[#364156]/40 group-hover:bg-[#DFF8EB] group-hover:shadow-[0_0_20px_rgba(223,248,235,0.4)] transition-all duration-500 w-full rounded-t-lg relative" style="height: 50%;">
+<div class="absolute inset-0 bg-gradient-to-t from-[#011638] to-transparent opacity-40 rounded-t-lg"></div>
+</div>
+<p class="text-[#364156] group-hover:text-[#DFF8EB] text-xs font-bold uppercase tracking-widest transition-colors">Sun</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-10 rounded-2xl bg-[#DFF8EB]/[0.05] border border-[#DFF8EB]/10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-[#DFF8EB] opacity-[0.03] rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="flex justify-between items-center z-10">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded-lg bg-[#DFF8EB]/10 border border-[#DFF8EB]/20">
+<span class="material-symbols-outlined text-[#DFF8EB] text-2xl">workspace_premium</span>
+</div>
+<div>
+<p class="text-[#DFF8EB] text-lg font-bold">Weekly Goal Target</p>
+<p class="text-[#CDCDCD] text-xs uppercase tracking-widest font-medium opacity-60">Mastery Phase 2</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-[#DFF8EB] text-3xl font-black">85<span class="text-sm ml-0.5">%</span></p>
+</div>
+</div>
+<div class="relative h-6 w-full rounded-full bg-[#011638] overflow-hidden p-1 shadow-inner border border-[#364156]/50">
+<div class="h-full rounded-full bg-[#DFF8EB] progress-glow relative" style="width: 85%;">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-white/40"></div>
+<div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent); background-size: 20px 20px;"></div>
+</div>
+</div>
+<div class="flex items-center gap-3 z-10">
+<span class="material-symbols-outlined text-[#DFF8EB] text-lg">auto_awesome</span>
+<p class="text-[#CDCDCD] text-sm font-medium">
+                    Excellent pace! You are only <span class="text-[#DFF8EB] font-black underline decoration-2 underline-offset-4">2.5 hours</span> away from achieving your highest performance tier.
+                </p>
+</div>
+</div>
+</div>
+<div class="px-10 py-8 border-t border-[#364156]/30 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#011638]/60">
+<p class="text-[#364156] text-[10px] font-bold uppercase tracking-[0.3em]">Institutional Verification v4.2.0 • RS-2024-XP</p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-[#122B1D] bg-[#364156]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-[#122B1D] bg-[#DFF8EB]"></div>
+<div class="w-8 h-8 rounded-full border-2 border-[#122B1D] bg-[#011638] flex items-center justify-center text-[10px] font-bold text-[#DFF8EB]">+3</div>
+</div>
+<p class="text-[#CDCDCD] text-[10px] font-bold uppercase tracking-widest opacity-60">Shared with Mentors</p>
+</div>
+</div>
+</div>
+
+</body></html>
